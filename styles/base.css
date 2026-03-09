@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* ===========================
+   Global Variables
+   =========================== */
+:root {
+    --primary-color: #383938;
+    /* forest green */
+    --secondary-color: #ada197;
+    /* warm sand */
+    --button-color: #0491c9;
+    /* dark slate blue */
+    --accent2-color: #e9c46a;
+    /* light golden yellow */
+    --light-color: #f9fcf9;
+    --heading-font: "Times New Roman", "Georgia", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+h1 {
+    text-align: center;
+    background-color: rgb(0 110 182 / 1);
+    padding: 0.5rem;
+    color: white;
+    padding: 1rem;
+
+}
+
+
+.navigation {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 2rem;
+    justify-content: center;
+    background-color: var(--primary-color);
+    gap: 15rem;
+    padding: 0.5rem;
+}
+
+.navigation li {
+    flex: 1 1 auto;
+    /* What is the difference
+     between auto and 100% flex-basis? - 
+     turn on link borders to view */
+}
+
+.navigation a {
+    font-weight: 700;
+    display: block;
+    color: var(--light-color);
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: #006699;
+    border-radius: 4px;
+}
+
+h2 {
+    text-align: center;
+    background-color: rgb(0 110 182 / 1);
+    padding: 0.2rem;
+    color: white;
+    padding: 1rem;
+    border-radius: 4px;
+
+
+}
+
+
+#course-title {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.card {
+    max-width: 900px;
+    background-color: #f0f8ff;
+    padding: 0.2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile section: image and text side by side */
+.profile {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    /* space before h3 */
+}
+
+.profile img {
+    width: 150px;
+    height: auto;
+    box-shadow: 0 0 8px gray;
+    margin-top: 0.5rem;
+    order: 2;
+    /* ensures image sits on the right */
+}
+
+.profile p {
+    flex: 1;
+    margin-top: 0.5rem;
+    margin: 0 auto;
+}
+
+/* Country heading */
+.country h3 {
+    border-bottom: 1px solid #333;
+    margin-bottom: 1rem;
+    padding-bottom: 0.25rem;
+    text-align: center;
+}
+
+/* Container for figure + paragraph */
+.country-content {
+    display: flex;
+    /* side by side layout */
+    gap: 1.5rem;
+    /* space between figure and text */
+    align-items: flex-start;
+}
+
+/* Figure block */
+.country-figure {
+    flex: 0 0 160px;
+    /* fixed width column for image+caption */
+    text-align: center;
+}
+
+.country-figure img {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    /* centers image */
+}
+
+.country-figure figcaption {
+    font-size: 0.9rem;
+    color: var(--accent2-color);
+    margin-top: 0.5rem;
+    /* caption directly under image */
+}
+
+/* Paragraph block */
+.country p {
+    flex: 1;
+    /* takes remaining space */
+    text-align: justify;
+}
+
+footer {
+    background-color: #004466;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    /* makes text bold */
+    font-style: italic;
+    /* makes text italic */
+}

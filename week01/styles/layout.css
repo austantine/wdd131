@@ -1,0 +1,110 @@
+/* ===========================
+   Global Variables
+   =========================== */
+:root {
+    --primary-color: #383938;
+    /* forest green */
+    --secondary-color: #ada197;
+    /* warm sand */
+    --button-color: #0491c9;
+    /* dark slate blue */
+    --accent2-color: #e9c46a;
+    /* light golden yellow */
+    --light-color: #f9fcf9;
+    --heading-font: "Times New Roman", "Georgia", serif;
+}
+
+header,
+body,
+footer {
+    width: 960px;
+    margin: 0 auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: start;
+    background-color: rgb(0 110 182 / 1);
+    padding: 0.5rem;
+    color: #fff;
+    max-width: 960px;
+}
+
+nav {
+    margin: 0 auto 2rem;
+    max-width: 960px;
+}
+
+
+.navigation {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--primary-color);
+    align-items: center;
+}
+
+.navigation li {
+    flex: 1 1 auto;
+    /* What is the difference
+     between auto and 100% flex-basis? - 
+     turn on link borders to view */
+}
+
+.navigation a {
+    font-weight: 700;
+    display: block;
+    color: #eee;
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--accent2-color);
+}
+
+.content-layout {
+    display: flex;
+    gap: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.main-container {
+    flex: 3;
+    /* main takes more space */
+    background-color: #eee;
+    padding: 1rem;
+    border: 1px solid rgb(0 0 0 / .2);
+}
+
+.aside {
+    flex: 1;
+    /* aside narrower */
+    background-color: var(--accent2-color);
+    padding: 1rem;
+}
+
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 10px;
+    background-color: #ddd;
+    font-weight: bold;
+    /* makes text bold */
+    font-style: italic;
+    /* makes text italic */
+
+}
