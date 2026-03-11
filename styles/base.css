@@ -34,6 +34,8 @@ body {
 /* Base header styling */
 header {
     background-color: var(--primary-color);
+    color: var(--light-color);
+    /* white text on dark background */
     text-align: center;
 
 }
