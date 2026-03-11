@@ -9,12 +9,24 @@
         content="WDD 131 – Dynamic Web Fundamentals | Austine | Course landing page with navigation, profile, and interests.">
     <meta name="author" content="Austine">
     <link rel="stylesheet" href="styles/base.css">
+    <!-- Preconnects for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- My own stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
     <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h1 contenteditable>WDD 131 – Dynamic Web Fundamentals</h1>
+        <h1 contenteditable>
+            <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        </h1>
         <nav class="navigation">
             <a href="https://www.linkedin.com">LinkedIn</a>
             <a href="https://byupw.instructure.com/">Canvas</a>
@@ -22,6 +34,7 @@
             <a href="#">Final Project</a>
         </nav>
     </header>
+
 
     <main>
 
@@ -56,10 +69,15 @@
         </section>
 
         <section class="card">
-            <h2>My Interests</h2>
-            <img src="images/nigeria-flag.jpeg" alt="My interests">
-            <p>I love exploring web technologies, reading scripture, and connecting with people through meaningful
-                projects.</p>
+            <h2>Course Resources</h2>
+            <nav>
+                <ul class="course-resources">
+                    <li><a href="#" title="Home">Home</a></li>
+                    <li><a href="projects.html" title="About Us">Projects</a></li>
+                    <li><a href="services.html" title="Services we offer">Services</a></li>
+                    <li><a href="contact.html" title="Contact us">Contact</a></li>
+                </ul>
+            </nav>
         </section>
     </main>
 

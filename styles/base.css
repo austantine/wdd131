@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 /* ===========================
    Global Variables
    =========================== */
@@ -8,11 +6,14 @@
     /* forest green */
     --secondary-color: #ada197;
     /* warm sand */
+    --body-blue-color: #006699;
     --button-color: #0491c9;
     /* dark slate blue */
     --accent2-color: #e9c46a;
     /* light golden yellow */
     --light-color: #f9fcf9;
+    --Light-gray: #f0f8ff;
+
     --heading-font: "Times New Roman", "Georgia", serif;
 }
 
@@ -26,18 +27,33 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--light-color);
     color: var(--primary-color);
+
 }
 
-h1 {
+/* Base header styling */
+header {
+    background-color: var(--primary-color);
     text-align: center;
-    background-color: rgb(0 110 182 / 1);
-    padding: 0.5rem;
-    color: white;
-    padding: 1rem;
 
 }
 
+/* Title inside header */
+header h1 {
+    background-color: var(--button-color);
+    color: var(--light-color);
+    padding: 1rem;
+    margin: 0;
+    /* removes default h1 margin */
+    font-family: 'Roboto', sans-serif;
+}
 
+/* Course title span */
+#course-title {
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Navigation styles */
 .navigation {
     list-style: none;
     display: flex;
@@ -51,9 +67,6 @@ h1 {
 
 .navigation li {
     flex: 1 1 auto;
-    /* What is the difference
-     between auto and 100% flex-basis? - 
-     turn on link borders to view */
 }
 
 .navigation a {
@@ -67,15 +80,15 @@ h1 {
 }
 
 .navigation a:hover {
-    background-color: #006699;
+    background-color: var(--body-blue-color);
     border-radius: 4px;
 }
 
 h2 {
     text-align: center;
-    background-color: rgb(0 110 182 / 1);
+    background-color: var(--button-color);
     padding: 0.2rem;
-    color: white;
+    color: var(--light-color);
     padding: 1rem;
     border-radius: 4px;
 
@@ -83,10 +96,11 @@ h2 {
 }
 
 
-#course-title {
+.course-resources {
     display: block;
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
 }
 
 
@@ -101,7 +115,7 @@ main {
 
 .card {
     max-width: 900px;
-    background-color: #f0f8ff;
+    background-color: var(--Light-gray);
     padding: 0.2rem;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -179,7 +193,7 @@ main {
 
 footer {
     background-color: #004466;
-    color: white;
+    color: var(--light-color);
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
