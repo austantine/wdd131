@@ -3,19 +3,18 @@
    =========================== */
 :root {
     --primary-color: #383938;
-    /* forest green */
+    /* dark gray */
     --secondary-color: #ada197;
     /* warm sand */
     --body-blue-color: #006699;
     --button-color: #0277bd;
-    /* dark slate blue */
-    --accent2-color: #e9c46a;
-    /* light golden yellow */
+    /* lighter blue for contrast */
+    --accent2-color: #8c6d1f;
+    /* darker golden brown */
     --light-color: #ffffff;
-    /*golden brown */
-    --Light-gray: #8c6d1f;
-
-
+    /* pure white */
+    --Light-gray: #f0f8ff;
+    /* true light gray/blue */
     --heading-font: "Times New Roman", "Georgia", serif;
 }
 
