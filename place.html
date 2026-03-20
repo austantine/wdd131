@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Place</title>
+    <meta name="description" content="Places i am from and places i have been to.">
+    <meta name="author" content="Augustine Osazee Airhiavbere">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header with only H1 -->
+    <header>
+        <h1>Discover Nigeria’s Beauty</h1>
+    </header>
+
+    <!-- Hero Section -->
+
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/lagos-nigeria" media="(max-width: 600px)">
+                <source srcset="images/lagos-nigeria" media="(max-width: 900px)">
+                <img src="images/lagos-nigeria.webp" alt="Hero image showing Lagos City Nigeria">
+            </picture>
+            <div class="hero-text">
+                <p>Responsive design with dynamic content.</p>
+                <button id="learnMoreBtn">Learn More</button>
+            </div>
+        </section>
+
+        <!-- Data Section -->
+        <section class="data">
+            <h2>Data</h2>
+            <dl class="data-grid">
+                <div class="data-item">
+                    <dt>Population:</dt>
+                    <dd>206 million (2020)</dd>
+                </div>
+                <div class="data-item">
+                    <dt>Area:</dt>
+                    <dd>923,768 km²</dd>
+                </div>
+                <div class="data-item">
+                    <dt>Capital:</dt>
+                    <dd>Abuja</dd>
+                </div>
+                <div class="data-item">
+                    <dt>Official Language:</dt>
+                    <dd>English</dd>
+                </div>
+            </dl>
+        </section>
+
+        <!-- Weather Section -->
+        <section id="weather">
+            <div class="weather-header">
+                <h2>Weather</h2>
+                <img src="images/icon.webp" alt="Weather Icon" class="weather-icon">
+            </div>
+            <p>Temperature: 30°F</p>
+            <p>Wind Speed: 10 mph</p>
+            <p>Wind Chill: <span id="windChill"></span></p>
+        </section>
+
+
+        <!-- Gallery Section -->
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <figure class="gallery-figure">
+                    <img src="images/abuja.jpeg" alt="Abuja FCT">
+                    <figcaption>Abuja FCT</figcaption>
+                </figure>
+                <figure class="gallery-figure">
+                    <img src="images/benin-city.jpeg" alt="Benin City">
+                    <figcaption>Benin City</figcaption>
+                </figure>
+                <figure class="gallery-figure">
+                    <img src="images/enugu.jpeg" alt="Enugu City">
+                    <figcaption>Enugu City</figcaption>
+                </figure>
+                <figure class="gallery-figure">
+                    <img src="images/kano.jpeg" alt="Kano City">
+                    <figcaption>Kano City</figcaption>
+                </figure>
+                <figure class="gallery-figure">
+                    <img src="images/lagos-nigeria.webp" alt="Lagos City">
+                    <figcaption>Lagos City</figcaption>
+                </figure>
+                <figure class="gallery-figure">
+                    <img src="images/cross-rivers.jpeg" alt="Calabar City">
+                    <figcaption>Calabar City</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🌴Augustine Osazee Airhiavbere 🌴| Benin City-Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

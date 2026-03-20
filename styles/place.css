@@ -1,0 +1,306 @@
+/* ===========================
+   Global Variables
+   =========================== */
+:root {
+    --primary-color: #03521c;
+    /* dark green */
+    --back-color: #b7b6b4;
+    --dark-back-color: #383938;
+    --light-color: #ffffff;
+    /* pure white */
+}
+
+/* Google Font */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--primary-color);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin: 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    background-color: var(--light-color);
+    text-shadow: var(--back-color) 2px 2px 4px;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hero picture,
+.hero img {
+    display: block;
+    width: 100%;
+    /* full width */
+    height: auto;
+    /* maintain aspect ratio */
+    object-fit: cover;
+    /* ensures image fills container neatly */
+}
+
+/* Overlay text inside hero */
+.hero-text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* center horizontally */
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--light-color);
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Data floats top-left */
+.data {
+    position: absolute;
+    top: 140px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--light-color);
+    padding-top: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-radius: 6px;
+    width: 250px;
+    box-sizing: border-box;
+    font-size: small;
+}
+
+.data h2 {
+    position: absolute;
+    top: -0.1rem;
+    /* move above the box */
+    left: 0;
+    margin: 0;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 0.5rem 1rem;
+    /* padding starts from the left */
+    padding-top: 0.5rem;
+    /* optional: adjust top padding */
+    font-size: 1.2rem;
+    width: 90%;
+    /* maintain 80% width */
+    box-sizing: border-box;
+    /* ensures padding doesn’t break width */
+
+}
+
+.data-grid {
+    margin: 1rem 0;
+}
+
+.data-item {
+    display: flex;
+    /* align dt and dd side by side */
+    align-items: center;
+    /* vertical centering */
+    margin-bottom: 0.5rem;
+}
+
+.data-item dt {
+    flex: 0 0 120px;
+    /* fixed width for labels */
+    font-weight: bold;
+    margin: 0;
+}
+
+.data-item dd {
+    flex: 1;
+    /* take remaining space */
+    margin: 0;
+    /* remove default dd margin */
+    padding-left: 0.25rem;
+    /* small spacing so text doesn’t touch */
+
+}
+
+/* Weather floats bottom-right */
+#weather {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--light-color);
+    padding: 2rem 1rem 1rem 1rem;
+    /* extra top padding for overlay heading */
+    border-radius: 6px;
+    width: 250px;
+    box-sizing: border-box;
+    font-size: small;
+}
+
+/* Overlay heading container */
+.weather-header {
+    position: absolute;
+    /* overlay on top of weather box */
+    top: -1.5rem;
+    /* lift above the box */
+    left: 0;
+    width: 70%;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border-radius: 6px 6px 0 0;
+    padding: 0.5rem 1rem;
+    display: flex;
+    /* align children horizontally */
+    align-items: center;
+    /* vertical centering */
+    justify-content: flex-start;
+    gap: 0.5rem;
+    /* space between h2 and img */
+}
+
+.weather-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.weather-header .weather-icon {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.gallery {
+    max-width: 100%;
+    overflow: hidden;
+    /* hide overflow */
+    margin: 1rem auto;
+}
+
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    background-color: var(--dark-back-color);
+    color: var(--light-color);
+    padding: 1.5rem;
+    font-weight: 700;
+    text-shadow: var(--primary-color) 2px 2px 4px;
+}
+
+/* Track that moves continuously */
+.gallery-grid {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    animation: scroll 30s linear infinite;
+    /* continuous movement */
+}
+
+.gallery-figure {
+    flex: 0 0 auto;
+    /* prevent shrinking */
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+.gallery-figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* crop to fill 200x200 */
+    border-radius: 6px;
+    box-shadow: #03521c 2px 2px 4px;
+}
+
+.gallery-figure figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Continuous scroll keyframes */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* adjust based on number of figures */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    text-align: center;
+    font-style: italic;
+    /* makes text italic */
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
+#currentyear {
+    padding-top: 1.5rem;
+}
+
+#lastModified {
+    padding-bottom: 0.5rem;
+}
+
+/* Responsive tweak: stack overlays below hero on small screens */
+@media (max-width: 600px) {
+
+    .data,
+    #weather,
+    .hero-text {
+        position: static;
+        max-width: 100%;
+        margin: 1rem 0;
+        transform: none;
+    }
+
+    /* Data grid stacked for readability */
+    .data-item {
+        display: block;
+        margin-bottom: 0.75rem;
+    }
+
+    .data-item dt {
+        margin-bottom: 0.25rem;
+        text-align: left;
+    }
+
+    .data-item dd {
+        margin: 0;
+        padding-left: 0;
+    }
+
+    /* Gallery: show fewer images per row */
+    .gallery-grid {
+        flex-wrap: wrap;
+        animation: none;
+        /* disable auto-scroll on small screens */
+        justify-content: center;
+    }
+
+    .gallery-figure {
+        width: 45%;
+        /* two per row */
+        height: auto;
+    }
+}

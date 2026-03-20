@@ -1,0 +1,79 @@
+@media (min-width: 768px) {
+
+    /* Hero text smaller overlay */
+    .hero-text {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+
+    /* Data box wider */
+    .data {
+        width: 300px;
+        font-size: 0.9rem;
+    }
+
+    /* Weather box wider */
+    #weather {
+        width: 300px;
+        font-size: 0.9rem;
+    }
+
+    /* Data grid side by side */
+    .data-item {
+        display: flex;
+        align-items: center;
+    }
+
+    .data-item dt {
+        flex: 0 0 140px;
+        text-align: right;
+        padding-right: 0.5rem;
+    }
+
+    .data-item dd {
+        flex: 1;
+    }
+
+    /* Gallery: 3 images visible at a time */
+    .gallery-figure {
+        width: 30%;
+        height: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    /* Hero text larger */
+    .hero-text {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+    }
+
+    /* Data box larger */
+    .data {
+        width: 350px;
+        font-size: 1rem;
+    }
+
+    /* Weather box larger */
+    #weather {
+        width: 350px;
+        font-size: 1rem;
+    }
+
+    /* Data grid labels wider */
+    .data-item dt {
+        flex: 0 0 200px;
+        font-size: 1rem;
+    }
+
+    .data-item dd {
+        font-size: 1rem;
+    }
+
+    /* Gallery: 4 images visible at a time */
+    .gallery-figure {
+        width: 22%;
+        height: auto;
+    }
+}
