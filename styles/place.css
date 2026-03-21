@@ -20,8 +20,8 @@ body {
 }
 
 header {
-    background-color: var(--primary-color);
-    color: var(--primary-color);
+    background-color: var(--primary-color, #03521c);
+    color: var(--primary-color, #03521c);
     padding-top: 2rem;
     padding-bottom: 2rem;
     margin: 0;
@@ -34,7 +34,7 @@ header h1 {
     padding: 1rem;
     font-size: 2rem;
     text-align: center;
-    background-color: var(--light-color);
+    background-color: var(--light-color, #ffffff);
     text-shadow: var(--back-color) 2px 2px 4px;
 }
 
@@ -63,8 +63,8 @@ header h1 {
     left: 50%;
     transform: translateX(-50%);
     /* center horizontally */
-    background-color: var(--overlay-dark);
-    color: var(--light-color);
+    background-color: var(--overlay-dark, rgba(0, 0, 0, 0.6));
+    color: var(--light-color, #ffffff);
     padding: 1rem;
     border-radius: 6px;
     text-align: center;
@@ -75,8 +75,8 @@ header h1 {
     position: absolute;
     top: 140px;
     left: 20px;
-    background-color: var(--overlay-dark);
-    color: var(--light-color);
+    background-color: var(--overlay-dark, rgba(0, 0, 0, 0.6));
+    color: var(--light-color, #ffffff);
     padding-top: 2rem;
     padding-right: 1rem;
     padding-left: 1rem;
@@ -92,8 +92,8 @@ header h1 {
     /* move above the box */
     left: 0;
     margin: 0;
-    background-color: var(--primary-color);
-    color: var(--light-color);
+    background-color: var(--primary-color, #03521c);
+    color: var(--light-color, #ffffff);
     padding: 0.5rem 1rem;
     /* padding starts from the left */
     padding-top: 0.5rem;
@@ -140,8 +140,8 @@ header h1 {
     position: absolute;
     bottom: 20px;
     right: 20px;
-    background: var(--overlay-dark);
-    color: var(--light-color);
+    background: var(--overlay-dark, rgba(0, 0, 0, 0.6));
+    color: var(--light-color, #ffffff);
     padding: 2rem 1rem 1rem 1rem;
     /* extra top padding for overlay heading */
     border-radius: 6px;
@@ -158,8 +158,8 @@ header h1 {
     /* lift above the box */
     left: 0;
     width: 70%;
-    background-color: var(--primary-color);
-    color: var(--light-color);
+    background-color: var(--primary-color, #03521c);
+    color: var(--light-color, #ffffff);
     border-radius: 6px 6px 0 0;
     padding: 0.5rem 1rem;
     display: flex;
@@ -192,8 +192,8 @@ header h1 {
 .gallery h2 {
     text-align: center;
     margin-bottom: 1rem;
-    background-color: var(--dark-back-color);
-    color: var(--light-color);
+    background-color: var(--dark-back-color, #383938);
+    color: var(--light-color, #ffffff);
     padding: 1.5rem;
     font-weight: 700;
     text-shadow: var(--primary-color) 2px 2px 4px;
@@ -244,8 +244,8 @@ header h1 {
 
 /* Footer */
 footer {
-    background-color: var(--primary-color);
-    color: var(--light-color);
+    background-color: var(--primary-color, #03521c);
+    color: var(--light-color, #ffffff);
     text-align: center;
     font-style: italic;
     /* makes text italic */
@@ -258,7 +258,7 @@ footer p {
 
 footer p::after {
     content: " ✨";
-    color: var(--light-color);
+    color: var(--light-color, #ffffff);
 }
 
 #currentyear {
