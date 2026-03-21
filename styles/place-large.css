@@ -78,7 +78,6 @@
         flex: 1;
         margin: 0;
         padding-left: 0;
-
     }
 
     /* Gallery: 3 images visible at a time */
@@ -130,11 +129,10 @@
         /* remove extra spacing */
         font-size: 1rem;
     }
-}
 
-
-/* Gallery: 4 images visible at a time */
-.gallery-figure {
-    width: 22%;
-    height: auto;
+    /* Gallery: 4 images visible at a time */
+    .gallery-figure {
+        width: 22%;
+        height: auto;
+    }
 }
