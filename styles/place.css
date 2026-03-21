@@ -8,6 +8,8 @@
     --dark-back-color: #383938;
     --light-color: #ffffff;
     /* pure white */
+    --overlay-dark: rgba(0, 0, 0, 0.6);
+    /* semi-transparent black */
 }
 
 /* Google Font */
@@ -61,7 +63,7 @@ header h1 {
     left: 50%;
     transform: translateX(-50%);
     /* center horizontally */
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: var(--overlay-dark);
     color: var(--light-color);
     padding: 1rem;
     border-radius: 6px;
@@ -73,13 +75,13 @@ header h1 {
     position: absolute;
     top: 140px;
     left: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: var(--overlay-dark);
     color: var(--light-color);
     padding-top: 2rem;
     padding-right: 1rem;
     padding-left: 1rem;
     border-radius: 6px;
-    width: 250px;
+    width: 200px;
     box-sizing: border-box;
     font-size: small;
 }
@@ -111,7 +113,7 @@ header h1 {
 .data-item {
     display: flex;
     /* align dt and dd side by side */
-    align-items: center;
+    align-items: flex-start;
     /* vertical centering */
     margin-bottom: 0.5rem;
 }
@@ -138,7 +140,7 @@ header h1 {
     position: absolute;
     bottom: 20px;
     right: 20px;
-    background: rgba(0, 0, 0, 0.6);
+    background: var(--overlay-dark);
     color: var(--light-color);
     padding: 2rem 1rem 1rem 1rem;
     /* extra top padding for overlay heading */
@@ -152,7 +154,7 @@ header h1 {
 .weather-header {
     position: absolute;
     /* overlay on top of weather box */
-    top: -1.5rem;
+    top: -1rem;
     /* lift above the box */
     left: 0;
     width: 70%;
@@ -220,7 +222,7 @@ header h1 {
     object-fit: cover;
     /* crop to fill 200x200 */
     border-radius: 6px;
-    box-shadow: #03521c 2px 2px 4px;
+    box-shadow: var(--primary-color) 2px 2px 4px;
 }
 
 .gallery-figure figcaption {
@@ -252,6 +254,11 @@ footer {
 footer p {
     padding: 0;
     margin: 0;
+}
+
+footer p::after {
+    content: " ✨";
+    color: var(--light-color);
 }
 
 #currentyear {

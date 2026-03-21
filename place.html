@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 - Place</title>
-    <meta name="description" content="Places i am from and places i have been to.">
+    <meta name="description"
+        content="Discover Nigeria’s beauty through places I am from and places I have visited, with data, weather insights, and a vibrant photo gallery.">
     <meta name="author" content="Augustine Osazee Airhiavbere">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css">
-    <script src="scripts/temples.js" defer></script>
+    <script src="scripts/place.js" defer></script>
 </head>
 
 <body>
@@ -31,7 +32,7 @@
             <picture>
                 <source srcset="images/lagos-nigeria" media="(max-width: 600px)">
                 <source srcset="images/lagos-nigeria" media="(max-width: 900px)">
-                <img src="images/lagos-nigeria.webp" alt="Hero image showing Lagos City Nigeria">
+                <img src="images/lagos-nigeria.webp" alt="Busy street in Lagos City, Nigeria with traffic and people">
             </picture>
             <div class="hero-text">
                 <p>Responsive design with dynamic content.</p>
@@ -59,6 +60,18 @@
                     <dt>Official Language:</dt>
                     <dd>English</dd>
                 </div>
+                <div class="data-item">
+                    <dt>Currency:</dt>
+                    <dd>Naira</dd>
+                </div>
+                <div class="data-item">
+                    <dt>Time Zone:</dt>
+                    <dd>GMT+1</dd>
+                </div>
+                <div class="data-item">
+                    <dt>Calling Code:</dt>
+                    <dd>+234</dd>
+                </div>
             </dl>
         </section>
 
@@ -66,11 +79,12 @@
         <section id="weather">
             <div class="weather-header">
                 <h2>Weather</h2>
-                <img src="images/icon.webp" alt="Weather Icon" class="weather-icon">
+                <img src="images/icon.svg" alt="Weather Icon" class="weather-icon">
             </div>
-            <p>Temperature: 30°F</p>
-            <p>Wind Speed: 10 mph</p>
-            <p>Wind Chill: <span id="windChill"></span></p>
+            <p id="temperature">Temperature: 86°F</p>
+            <p id="windSpeed">Wind Speed: 10 mph</p>
+            <p id="humidity">Humidity: 70%</p>
+            <p>Feels Like: <span id="feelsLike"></span></p>
         </section>
 
 
