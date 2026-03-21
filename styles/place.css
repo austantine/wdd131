@@ -2,13 +2,13 @@
    Global Variables
    =========================== */
 :root {
-    --primary-color: #03521c;
+    --color-primary: #03521c;
     /* dark green */
-    --back-color: #b7b6b4;
-    --dark-back-color: #383938;
-    --light-color: #ffffff;
+    --color-back: #b7b6b4;
+    --color-dark-back: #383938;
+    --color-light: #ffffff;
     /* pure white */
-    --overlay-dark: rgba(0, 0, 0, 0.6);
+    --color-overlay-dark: rgba(0, 0, 0, 0.6);
     /* semi-transparent black */
 }
 
@@ -20,8 +20,8 @@ body {
 }
 
 header {
-    background-color: var(--primary-color, #03521c);
-    color: var(--primary-color, #03521c);
+    background-color: var(--color-primary);
+    color: var(--color-light);
     padding-top: 2rem;
     padding-bottom: 2rem;
     margin: 0;
@@ -34,8 +34,10 @@ header h1 {
     padding: 1rem;
     font-size: 2rem;
     text-align: center;
-    background-color: var(--light-color, #ffffff);
-    text-shadow: var(--back-color) 2px 2px 4px;
+    background-color: var(--color-light);
+    color: var(--color-primary);
+    font-weight: 700;
+    text-shadow: var(--color-back) 2px 2px 4px;
 }
 
 .hero {
@@ -63,8 +65,8 @@ header h1 {
     left: 50%;
     transform: translateX(-50%);
     /* center horizontally */
-    background-color: var(--overlay-dark, rgba(0, 0, 0, 0.6));
-    color: var(--light-color, #ffffff);
+    background-color: var(--color-overlay-dark);
+    color: var(--color-light);
     padding: 1rem;
     border-radius: 6px;
     text-align: center;
@@ -75,8 +77,8 @@ header h1 {
     position: absolute;
     top: 140px;
     left: 20px;
-    background-color: var(--overlay-dark, rgba(0, 0, 0, 0.6));
-    color: var(--light-color, #ffffff);
+    background-color: var(--color-overlay-dark);
+    color: var(--color-light);
     padding-top: 2rem;
     padding-right: 1rem;
     padding-left: 1rem;
@@ -92,18 +94,12 @@ header h1 {
     /* move above the box */
     left: 0;
     margin: 0;
-    background-color: var(--primary-color, #03521c);
-    color: var(--light-color, #ffffff);
+    background-color: var(--color-primary);
+    color: var(--color-light);
     padding: 0.5rem 1rem;
-    /* padding starts from the left */
-    padding-top: 0.5rem;
-    /* optional: adjust top padding */
     font-size: 1.2rem;
     width: 90%;
-    /* maintain 80% width */
     box-sizing: border-box;
-    /* ensures padding doesn’t break width */
-
 }
 
 .data-grid {
@@ -132,7 +128,6 @@ header h1 {
     /* remove default dd margin */
     padding-left: 0.25rem;
     /* small spacing so text doesn’t touch */
-
 }
 
 /* Weather floats bottom-right */
@@ -140,8 +135,8 @@ header h1 {
     position: absolute;
     bottom: 20px;
     right: 20px;
-    background: var(--overlay-dark, rgba(0, 0, 0, 0.6));
-    color: var(--light-color, #ffffff);
+    background: var(--color-overlay-dark);
+    color: var(--color-light);
     padding: 2rem 1rem 1rem 1rem;
     /* extra top padding for overlay heading */
     border-radius: 6px;
@@ -158,8 +153,8 @@ header h1 {
     /* lift above the box */
     left: 0;
     width: 70%;
-    background-color: var(--primary-color, #03521c);
-    color: var(--light-color, #ffffff);
+    background-color: var(--color-primary);
+    color: var(--color-light);
     border-radius: 6px 6px 0 0;
     padding: 0.5rem 1rem;
     display: flex;
@@ -192,11 +187,11 @@ header h1 {
 .gallery h2 {
     text-align: center;
     margin-bottom: 1rem;
-    background-color: var(--dark-back-color, #383938);
-    color: var(--light-color, #ffffff);
+    background-color: var(--color-dark-back);
+    color: var(--color-light);
     padding: 1.5rem;
     font-weight: 700;
-    text-shadow: var(--primary-color) 2px 2px 4px;
+    text-shadow: var(--color-primary) 2px 2px 4px;
 }
 
 /* Track that moves continuously */
@@ -222,7 +217,7 @@ header h1 {
     object-fit: cover;
     /* crop to fill 200x200 */
     border-radius: 6px;
-    box-shadow: var(--primary-color) 2px 2px 4px;
+    box-shadow: var(--color-primary) 2px 2px 4px;
 }
 
 .gallery-figure figcaption {
@@ -244,8 +239,8 @@ header h1 {
 
 /* Footer */
 footer {
-    background-color: var(--primary-color, #03521c);
-    color: var(--light-color, #ffffff);
+    background-color: var(--color-primary);
+    color: var(--color-light);
     text-align: center;
     font-style: italic;
     /* makes text italic */
@@ -258,7 +253,7 @@ footer p {
 
 footer p::after {
     content: " ✨";
-    color: var(--light-color, #ffffff);
+    color: var(--color-light);
 }
 
 #currentyear {
