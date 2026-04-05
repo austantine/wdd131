@@ -23,23 +23,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ⭐ Star rating enhancement
     const ratingRadios = document.querySelectorAll('input[name="rating"]');
-    const defaultStarColor = "#999";    // matches CSS default
-    const selectedStarColor = "#ffcc00"; // gold when selected
+    const defaultStarColor = "#999";       // matches CSS default
+    const selectedStarColor = "#ffcc00";   // gold when selected
 
     ratingRadios.forEach(radio => {
         radio.addEventListener("change", () => {
             const selectedValue = parseInt(radio.value);
 
-            // Reset all stars to default gray
-            document.querySelectorAll('fieldset label span').forEach(span => {
-                span.style.color = defaultStarColor;
+            // Reset all labels to default gray
+            document.querySelectorAll('fieldset label').forEach(label => {
+                label.style.color = defaultStarColor;
             });
 
-            // Highlight stars up to selected value
+            // Highlight labels up to selected value
             for (let i = 1; i <= selectedValue; i++) {
-                const starSpan = document.querySelector(`#rating${i} + span`);
-                if (starSpan) {
-                    starSpan.style.color = selectedStarColor;
+                const starLabel = document.querySelector(`label[for="rating${i}"]`);
+                if (starLabel) {
+                    starLabel.style.color = selectedStarColor;
                 }
             }
         });

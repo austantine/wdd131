@@ -73,7 +73,7 @@ fieldset label {
     /* larger stars */
     cursor: pointer;
     margin-right: 10px;
-    color: #999;
+    color: #004466;
     /* default gray stars */
     transition: color 0.3s ease;
 }
@@ -84,13 +84,13 @@ fieldset input[type="radio"] {
 }
 
 /* Highlight stars when selected */
-fieldset input[type="radio"]:checked+span {
+input[type="radio"]:checked+label {
     color: #ffcc00;
     /* gold stars when selected */
 }
 
 /* Highlight stars on hover */
-fieldset label:hover span {
+fieldset label:hover {
     color: #ffcc00;
     /* gold stars when hovered */
 }
