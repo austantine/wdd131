@@ -70,23 +70,29 @@ fieldset legend {
 
 fieldset label {
     font-size: 1em;
-    /* make stars larger */
+    /* larger stars */
     cursor: pointer;
     margin-right: 10px;
-    color: #004466;
+    color: #999;
     /* default gray stars */
     transition: color 0.3s ease;
 }
 
+/* Hide the radio buttons */
 fieldset input[type="radio"] {
     display: none;
-    /* hide the radio buttons */
 }
 
-fieldset input[type="radio"]:checked+span,
+/* Highlight stars when selected */
+fieldset input[type="radio"]:checked+span {
+    color: #ffcc00;
+    /* gold stars when selected */
+}
+
+/* Highlight stars on hover */
 fieldset label:hover span {
     color: #ffcc00;
-    /* gold stars when selected or hovered */
+    /* gold stars when hovered */
 }
 
 /* Submit Button */
@@ -102,6 +108,25 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #054723;
+    /* deep green hover */
+}
+
+/* Back Button Styling */
+#backButton {
+    background-color: #004466;
+    /* deep blue */
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+#backButton:hover {
+    background-color: #ff6600;
+    /* orange hover */
 }
 
 /* Footer */
@@ -129,7 +154,8 @@ footer p {
         gap: 10px;
     }
 
-    input[type="submit"] {
+    input[type="submit"],
+    #backButton {
         padding: 8px;
     }
 

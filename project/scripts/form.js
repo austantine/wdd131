@@ -7,8 +7,8 @@ const products = [
     { id: "p5", name: "Headphones" }
 ];
 
-// Populate product select options dynamically
 document.addEventListener("DOMContentLoaded", () => {
+    // Populate product select options dynamically
     const productSelect = document.getElementById("productName");
     products.forEach(product => {
         const option = document.createElement("option");
@@ -23,18 +23,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ⭐ Star rating enhancement
     const ratingRadios = document.querySelectorAll('input[name="rating"]');
+    const defaultStarColor = "#999";    // matches CSS default
+    const selectedStarColor = "#ffcc00"; // gold when selected
+
     ratingRadios.forEach(radio => {
         radio.addEventListener("change", () => {
             const selectedValue = parseInt(radio.value);
-            // Reset all stars to gray
+
+            // Reset all stars to default gray
             document.querySelectorAll('fieldset label span').forEach(span => {
-                span.style.color = "#999";
+                span.style.color = defaultStarColor;
             });
+
             // Highlight stars up to selected value
             for (let i = 1; i <= selectedValue; i++) {
                 const starSpan = document.querySelector(`#rating${i} + span`);
                 if (starSpan) {
-                    starSpan.style.color = "#ffcc00"; // gold
+                    starSpan.style.color = selectedStarColor;
                 }
             }
         });
