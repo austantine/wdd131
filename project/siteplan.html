@@ -24,8 +24,7 @@
             <h2>Site Name</h2>
             <p><strong>UNIBEN FAGCOOP MPCS Ltd</strong> – This name represents a financial cooperative society
                 based in University of Benin, Benin City, Nigeria. It was chosen to highlight the community-centered
-                mission of promoting
-                financial inclusion and empowerment.</p>
+                mission of promoting financial inclusion and empowerment.</p>
             <p><em>Optional domain availability:</em> https:/fagcoopmpcs.org</p>
         </section>
 
@@ -33,10 +32,10 @@
         <section>
             <h2>Site Purpose</h2>
             <p>The purpose of the Uniben Faculty of Agriculture Staff Multi-Purpose Cooperative Society Limited
-                (FAGCOOP) website is to provide information about the
-                cooperative’s mission, membership benefits, savings and loan services, community development
-                initiatives, and contact details. It will serve as a hub for members and prospective members to learn,
-                engage, and access financial services.</p>
+                (FAGCOOP) website is to provide information about the cooperative’s mission, membership benefits,
+                savings and loan services, community development initiatives, and contact details. It will serve as a
+                hub
+                for members and prospective members to learn, engage, and access financial services.</p>
         </section>
 
         <!-- Scenarios -->
@@ -117,6 +116,46 @@
                 community empowerment in Nigeria. By creating a responsive website, the cooperative can reach more
                 people, provide easy access to information, and strengthen trust among members. It also reflects my
                 interest in financial literacy and how digital tools can support local communities.</p>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section>
+            <h2>Contact Form Demo</h2>
+            <form method="get" action="review.html">
+                <label for="membership">Membership Type:</label>
+                <select id="membership" name="membership" required>
+                    <option value="" disabled selected>Select membership type...</option>
+                    <option value="regular">Regular Member</option>
+                    <option value="student">Student Member</option>
+                    <option value="associate">Associate Member</option>
+                </select>
+
+                <fieldset>
+                    <legend>Preferred Savings Plan:</legend>
+                    <label><input type="radio" name="savings" value="daily"> Daily</label>
+                    <label><input type="radio" name="savings" value="weekly"> Weekly</label>
+                    <label><input type="radio" name="savings" value="monthly"> Monthly</label>
+                    <label><input type="radio" name="savings" value="quarterly"> Quarterly</label>
+                    <label><input type="radio" name="savings" value="yearly"> Yearly</label>
+                </fieldset>
+
+                <label for="joinDate">Preferred Joining Date:</label>
+                <input type="date" id="joinDate" name="joinDate" required>
+
+                <fieldset>
+                    <legend>Services Interested In:</legend>
+                    <label><input type="checkbox" name="services" value="loans"> Loans</label>
+                    <label><input type="checkbox" name="services" value="savings"> Savings</label>
+                    <label><input type="checkbox" name="services" value="advisory"> Financial Advisory</label>
+                    <label><input type="checkbox" name="services" value="community"> Community Projects</label>
+                </fieldset>
+
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="4" cols="40"
+                    placeholder="Enter your comments here..."></textarea>
+
+                <input type="submit" value="Submit Form">
+            </form>
         </section>
     </main>
 

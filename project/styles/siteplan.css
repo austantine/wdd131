@@ -16,8 +16,6 @@ header {
     /* Deep blue for header */
     color: #ffffff;
     padding: 20px;
-
-    /* Flexbox for vertical alignment */
     display: flex;
     flex-direction: column;
     /* stack children vertically */
@@ -32,44 +30,26 @@ header {
     color: #ff6600;
     /* Accent orange for logo */
     margin-bottom: 5px;
-    /* reduced spacing */
 }
 
 .logo img {
     display: block;
     margin: 0 auto 5px;
-    /* smaller gap below logo image */
     max-height: 70px;
-    /* optional: control logo size */
     border-radius: 40px;
 }
 
-/* Reduce spacing between heading and paragraph */
 header h1 {
     margin: 0;
-    /* remove default margins */
     padding-bottom: 4px;
-    /* small controlled gap below h1 */
 }
 
-/*header p {*/
-/*margin: 0;
-    /* remove default margins */
-/* padding-top: 2px;
-    /* tiny gap above paragraph */
-/* font-size: 0.95em;
-    /* slightly smaller for balance */
-/*}
-
-/* Headings */
 h2 {
     font-family: 'Georgia', serif;
-    /* Headings font */
     color: #004466;
     margin-bottom: 10px;
 }
 
-/* Sections */
 section {
     margin: 30px auto;
     max-width: 900px;
@@ -79,12 +59,10 @@ section {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Lists */
 ul {
     margin-left: 20px;
 }
 
-/* Wireframes */
 .wireframes {
     display: flex;
     flex-wrap: wrap;
@@ -103,16 +81,13 @@ ul {
 
 .wireframe:hover {
     background-color: #e6f7ff;
-    /* Light blue highlight */
 }
 
-/* Footer */
 footer {
     background-color: #004466;
     color: #ffffff;
     text-align: center;
     font-style: italic;
-    /* makes text italic */
     padding: 15px;
     margin-top: 30px;
 }
@@ -130,7 +105,6 @@ footer p {
     padding-bottom: 0.5rem;
 }
 
-/* Optional Navigation */
 nav {
     background-color: #00334d;
     padding: 10px;
@@ -153,4 +127,90 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #ff6600;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+label,
+legend {
+    font-weight: bold;
+    color: #004466;
+}
+
+select,
+input[type="date"],
+textarea {
+    padding: 8px;
+    border: 1px solid #004466;
+    border-radius: 4px;
+    font-family: 'Arial', sans-serif;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+fieldset {
+    border: 1px solid #004466;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #004466;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+    background-color: #065013;
+}
+
+/* ✅ Media Queries for Responsiveness */
+
+/* Small screens (mobile) */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.4em;
+    }
+
+    section {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .wireframes {
+        flex-direction: column;
+    }
+
+    .wireframe {
+        flex: 1 1 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Medium screens (tablet) */
+@media (min-width: 601px) and (max-width: 900px) {
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    .wireframe {
+        flex: 1 1 100%;
+    }
 }
