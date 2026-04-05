@@ -1,0 +1,17 @@
+/* Back Button Styling */
+#backButton {
+    background-color: #004466;
+    /* Deep blue */
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+#backButton:hover {
+    background-color: #ff6600;
+    /* Accent orange on hover */
+}

@@ -1,0 +1,140 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #242323;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #004466;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f6f1f1;
+    border: 1px solid #004466;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label,
+legend {
+    font-weight: bold;
+    color: #004466;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+    padding: 8px;
+    border: 1px solid #004466;
+    border-radius: 4px;
+    font-family: 'Arial', sans-serif;
+}
+
+fieldset {
+    border: 1px solid #004466;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Radio and Checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Star Rating Styling */
+fieldset legend {
+    margin-bottom: 8px;
+}
+
+fieldset label {
+    font-size: 1em;
+    /* make stars larger */
+    cursor: pointer;
+    margin-right: 10px;
+    color: #004466;
+    /* default gray stars */
+    transition: color 0.3s ease;
+}
+
+fieldset input[type="radio"] {
+    display: none;
+    /* hide the radio buttons */
+}
+
+fieldset input[type="radio"]:checked+span,
+fieldset label:hover span {
+    color: #ffcc00;
+    /* gold stars when selected or hovered */
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background-color: #004466;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+    background-color: #054723;
+}
+
+/* Footer */
+footer {
+    background-color: #004466;
+    color: #ffffff;
+    text-align: center;
+    font-style: italic;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    input[type="submit"] {
+        padding: 8px;
+    }
+
+    fieldset label {
+        font-size: 1.2em;
+        /* slightly smaller stars on mobile */
+    }
+}
