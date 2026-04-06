@@ -4,7 +4,8 @@ const products = [
     { id: "p2", name: "Smartphone" },
     { id: "p3", name: "Tablet" },
     { id: "p4", name: "Smartwatch" },
-    { id: "p5", name: "Headphones" }
+    { id: "p5", name: "Headphones" },
+    { id: "p6", name: "Pointer" }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ⭐ Star rating enhancement
     const ratingRadios = document.querySelectorAll('input[name="rating"]');
-    const defaultStarColor = "#999";       // matches CSS default
+    const defaultStarColor = "#004466";       // matches CSS default
     const selectedStarColor = "#ffcc00";   // gold when selected
 
     ratingRadios.forEach(radio => {
