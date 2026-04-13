@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gallery - Display of images for Benin City Cooperative Society">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+    <!-- ===========================
+     HEADER (Navigation + Branding)
+     =========================== -->
+    <header>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a class="logo" href="index.html"><img src="images/fagcoop-logo.png" alt="cooperative logo"></a>
+                <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+                <ul class="nav-links">
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="community.html">Community Impact</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===========================
+     MAIN CONTENT (Gallery Section)
+     =========================== -->
+    <main class="container">
+        <h1>Gallery</h1>
+        <p>Explore highlights from our cooperative activities and community projects.</p>
+
+        <!-- Gallery grid -->
+        <div class="gallery">
+            <img src="images/project1.webp" alt="Community Project" data-caption="New school built by cooperative"
+                loading="lazy">
+            <img src="images/event1.webp" alt="Member Event" data-caption="Annual members’ meeting in Benin City"
+                loading="lazy">
+            <img src="images/workshop.webp" alt="Financial Literacy Workshop"
+                data-caption="Workshop on budgeting and savings" loading="lazy">
+            <img src="images/loan.webp" alt="Loan Support Program" data-caption="Small business loan beneficiaries"
+                loading="lazy">
+        </div>
+
+        <!-- Lightbox modal with slideshow controls -->
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img" alt="">
+            <div id="caption"></div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+        </div>
+    </main>
+
+    <!-- ===========================
+     FOOTER (Site Info + References Link)
+     =========================== -->
+    <footer class="footer">
+        <p>&copy; <span id="currentyear"></span> 🌴Augustine Osazee Airhiavbere 🌴| Benin City-Nigeria</p>
+        <p id="lastModified"></p>
+        <a href="references.html">References</a>
+
+    </footer>
+</body>
+
+</html>

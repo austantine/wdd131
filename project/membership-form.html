@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Membership Form - Benin City Cooperative Society">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Form</title>
+    <!-- Unified stylesheet -->
+    <link rel="stylesheet" href="styles/project.css">
+    <!-- Membership form JavaScript -->
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a class="logo" href="index.html"><img src="images/fagcoop-logo.png" alt="cooperative logo"></a>
+                <ul class="nav-links">
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="community.html">Community Impact</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Membership Application Form</h1>
+        <p>Please complete the form below to apply for membership in the Benin City Cooperative Society.</p>
+
+        <form id="membershipForm">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+                <span class="error" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+                <span class="error" id="phoneError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Residential Address</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+                <span class="error" id="addressError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="idType">ID Type</label>
+                <select id="idType" name="idType" required>
+                    <option value="">-- Select ID Type --</option>
+                    <option value="National ID">National ID</option>
+                    <option value="Voter’s Card">Voter’s Card</option>
+                    <option value="Passport">Passport</option>
+                </select>
+                <span class="error" id="idError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="occupation">Occupation</label>
+                <input type="text" id="occupation" name="occupation">
+            </div>
+
+            <button type="submit" class="btn">Submit Application</button>
+        </form>
+
+        <div id="successMessage" class="success"></div>
+        <div id="emailSimulation" class="email-simulation"></div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="currentyear"></span> 🌴Augustine Osazee Airhiavbere 🌴| Benin City-Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
