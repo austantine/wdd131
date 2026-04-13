@@ -284,23 +284,41 @@ footer.footer a {
 }
 
 /* ===========================
-     GALLERY
-     =========================== */
+   GALLERY
+   =========================== */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    /* two images per row */
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.gallery figure {
+    margin: 0;
+    text-align: center;
 }
 
 .gallery img {
     width: 100%;
+    height: 250px;
+    /* fixed height for uniform size */
+    object-fit: cover;
+    /* crop to fill without distortion */
     border-radius: 8px;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .gallery img:hover {
     transform: scale(1.05);
     /* Zoom effect */
+}
+
+.gallery figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #444;
 }
 
 /* Lightbox overlay */
@@ -363,6 +381,25 @@ footer.footer a {
 .prev:hover,
 .next:hover {
     color: var(--color-lightyellow);
+}
+
+/* ===========================
+     RESPONSIVE RULES
+     =========================== */
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        /* one image per row on mobile */
+    }
+
+    .gallery img {
+        height: 200px;
+        /* slightly smaller fixed height for mobile */
+    }
+
+    .gallery figcaption {
+        font-size: 0.9rem;
+    }
 }
 
 /* ===========================
